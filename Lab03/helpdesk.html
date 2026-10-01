@@ -18,15 +18,15 @@
     <fieldset>
         <legend>Student details</legend>
     <p><label for="std id">Student ID</label> 
-		<input type="text" name= "stdid"  required="required"/>
+		<input type="text" name= "stdid" pattern="\d{7,10}"  required="required"/>
 	</p>
 	<p><label for="gname">Given Name</label> 
 		
-      <input type="text" name= "gname"  required="required"/>
+      <input type="text" name= "gname"  pattern="[A-Za-z\s]+" required="required"/>
       
       <label for="fname">Family Name</label> 
 		
-      <input type="text" name= "fname"  required="required"/>
+      <input type="text" name= "fname"  pattern="[A-Za-z\s]+" required="required"/>
     </p>
     </fieldset>
 
@@ -86,7 +86,7 @@
 		</p>
 
         <p><label for="time">Time</label> 
-            <input type="text" name= "starttime"  placeholder="00:00" size="10" title=""format: hh:mm(24-hour)/>
+            <input type="text" name= "starttime"  placeholder="00:00" size="10" title="Format: hh:mm (24-hour)" pattern="\d{1,2}:\d{2}"/>
         
 		
 			
