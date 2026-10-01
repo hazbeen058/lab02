@@ -1,1 +1,97 @@
-<form id="survey" method="get" action="notform.html" ></form>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Demonstrates some basic HTML form elements" />
+  <meta name="keywords" content="HTML, Form, tags" />
+  <meta name="author" content="A Lecturer"  />
+  <title>CWA Help Desk Appointment</title>
+</head>
+<body>
+    <img src="logo.png" width="200" height="100"/>
+<h1>CWA Help Desk Appointment</h1>
+    <p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday</p>
+
+    <p>Check Blackboard for when CWA tutors will be there</p>
+<form method="post" action="helpdesk.html">
+	
+    <fieldset>
+        <legend>Student details</legend>
+    <p><label for="std id">Student ID</label> 
+		<input type="text" name= "stdid"  required="required"/>
+	</p>
+	<p><label for="gname">Given Name</label> 
+		
+      <input type="text" name= "gname"  required="required"/>
+      
+      <label for="fname">Family Name</label> 
+		
+      <input type="text" name= "fname"  required="required"/>
+    </p>
+    </fieldset>
+
+    <fieldset> 
+        <legend>Your unit</legend>
+			<p><label for="unit">COS10011</label> 
+				<input type="radio"  name="subject" value="COS10011"/>
+                
+                <label for="unit">COS6004</label> 
+				<input type="radio"  name="subject" value="COS6004"/>
+
+                <label for="unit">COS6007</label> 
+				<input type="radio" name="subject" value="COS6007"/>
+			</p>
+
+            <p><label for="tutor">Your tutor</label> 
+			<select name="tutor" id="tutor">
+                <option value="" hidden>Please Select</option>
+				<option value="john">john</option>			
+				<option value="max">Max</option>
+				<option value="charles lerlec">Charles Lerlec</option>
+			</select>
+		</p>
+    </fieldset>
+
+    <fieldset> 
+        <legend>Issue</legend>
+			
+			<p><label for="html">HTML</label> 
+				<input type="checkbox"  name="issues[]" value="html" checked="checked"/>
+			
+			<label for="css">CSS</label> 
+				<input type="checkbox" name="issues[]" value="css"/>
+			
+			<label for="java">JavaScript</label> 
+				<input type="checkbox"  name="issues[]" value="java"/>
+			</p>  
+
+            <p><label for="doi">Description of Issue</label></p>
+			<textarea id="doi" name="description" rows="4" cols="40" placeholder="Please description of your problem here"></textarea>
+		
+		
+    </fieldset>
+      
+
+    
+	
+	<fieldset>
+		<legend>Preferred Date/Time</legend>
+		
+		
+		<p><label for="date">Date</label> 
+			<input type="text" name= "bday"  placeholder="dd-mm-yyyy" maxlength="10" size="10" pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]"/>
+		</p>
+
+        <p><label for="time">Time</label> 
+            <input type="text" name= "starttime"  placeholder="00:00" size="10" title=""format: hh:mm(24-hour)/>
+        
+		
+			
+	</fieldset>
+		
+	  
+	<input type= "submit" value="Register"/>
+	<input type= "reset" value="Reset Form"/>
+</form>
+</body>
+</html>
